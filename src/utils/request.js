@@ -7,7 +7,7 @@ import axios from "axios";
 
 export function request(config) {
     const instance = axios.create({
-        baseURL: 'https://v1.hitokoto.cn',
+        baseURL: 'https://v1.hitokoto.cn?c=b',
         timeout: 10000
     })
 
