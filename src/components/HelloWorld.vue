@@ -38,8 +38,8 @@ h3 {
 }
 
 .greetings {
-  top: 40%;
- /* margin: 0 auto; */
+  /* top: 40%; */
+ padding: 400px;
 
   /* position: absolute;
   left: 50%;
