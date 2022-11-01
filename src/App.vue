@@ -1,11 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './views/home.vue'
 </script>
 
 <template>
     <div>
-      <HelloWorld msg="xiamudaren"/>
+      <HomePage msg="xiamudaren"/>
     </div>
 </template>
 

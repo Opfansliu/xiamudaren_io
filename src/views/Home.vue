@@ -2,6 +2,9 @@
 import { onMounted, reactive } from 'vue';
 import http from '../utils/http'
 import {Button} from 'ant-design-vue'
+import {useRouter} from 'vue-router'
+
+// const router = useRouter()
 
 defineProps({
   msg: {
@@ -26,6 +29,12 @@ function getOneLine() {
   })
 }
 
+const router = useRouter()
+function goSkills() {
+  console.log(router);
+  router.push({name:'skills'})
+}
+
 </script>
 
 <template>
@@ -36,7 +45,7 @@ function getOneLine() {
     <div class="lineV"></div>
     <h3>{{randomWords.content}}</h3>
     <div class="profile">
-      <Button type="text">*语言*</Button>
+      <Button type="text"  @click="goSkills">*语言*</Button>
       <Button type="text">*读书*</Button>
       <Button type="text">*生活*</Button>
     </div>
