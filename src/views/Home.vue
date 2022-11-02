@@ -4,15 +4,9 @@ import http from '../utils/http'
 import {Button} from 'ant-design-vue'
 import {useRouter} from 'vue-router'
 
-// const router = useRouter()
-
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  },
-})
 const randomWords = reactive({content: ''})
+const router = useRouter()
+
 onMounted (() => {
   console.log(`the comoponent is now mounted`)
   getOneLine()
@@ -28,28 +22,37 @@ function getOneLine() {
     // console.log(error)
   })
 }
-
-const router = useRouter()
 function goSkills() {
   console.log(router);
   router.push({name:'skills'})
+}
+function goRead() {
+  router.push('read')
+}
+function goLife() {
+  router.push('life')
 }
 
 </script>
 
 <template>
-  <div class="greetings">
-    <img src="../assets/logo.png"/>
-    <h1>{{ msg }}</h1>
-    <h4> 保持热爱、奔赴山海 </h4>
-    <div class="lineV"></div>
-    <h3>{{randomWords.content}}</h3>
-    <div class="profile">
-      <Button type="text"  @click="goSkills">*语言*</Button>
-      <Button type="text">*读书*</Button>
-      <Button type="text">*生活*</Button>
-    </div>
+  <div class="bg">
+    <div class="coverBg">
+        <div class="greetings">
+              <img src="../assets/logo.png"/>
+              <h1>xiamudaren</h1>
+              <h4> 保持热爱、奔赴山海 </h4>
+              <div class="lineV"></div>
+              <h3>{{randomWords.content}}</h3>
+              <div class="profile">
+                      <Button type="text"  @click="goSkills">*语言*</Button>
+                      <Button type="text" @click="goRead">*读书*</Button>
+                      <Button type="text" @click="goLife">*生活*</Button>
+              </div>
+         </div>
+     </div>
   </div>
+ 
 </template>
 
 <style scoped>
@@ -75,13 +78,13 @@ h3 {
 
 h4 {
   top: 18px;
-  color: gray;
+  color: rgb(216, 207, 207);
 }
 .lineV {
   margin-top: 40px;
   width: 40%;
   height: 1px;
-  background-color: rgb(103, 99, 99);
+  background-color: #4b464c;
   margin-left: 30%;
 }
 .greetings {
@@ -100,5 +103,20 @@ h4 {
   width: 100px;
   height: 40px;
   color: beige;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/night01.gif");
+  background-size: cover;
+  background-position: center 0px;
+  text-align: center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+.coverBg {
+  background-color:hsla(0, 0%, 0%, 0.5) ;
+
 }
 </style>
