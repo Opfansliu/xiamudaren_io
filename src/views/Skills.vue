@@ -5,7 +5,7 @@
 
 <template>
     <div>
-       556788890023
+       skills
     </div>
 
 </template>
