@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView, useRouter } from 'vue-router'
-import HomePage from './views/Home.vue'
 
 
 const router = useRouter()
@@ -13,7 +12,7 @@ function goSkills() {
 <template>
      <div>
         <nav>
-          <RouterLink to="/home" />
+          <RouterLink to="/" />
         </nav>
         <RouterView />
     </div>
