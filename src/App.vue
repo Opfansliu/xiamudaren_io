@@ -13,7 +13,7 @@ function goSkills() {
 <template>
      <div>
         <nav>
-          <RouterLink to="/" />
+          <RouterLink to="/home" />
         </nav>
         <RouterView />
     </div>
