@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-// import HomeView from '../views/Home.vue'
+import HomeView from '../views/Home.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-       component: () => import('../views/Home.vue') 
+       component: HomeView
     },
     {
       path: '/life',
