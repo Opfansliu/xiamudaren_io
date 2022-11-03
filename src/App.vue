@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView, useRouter } from 'vue-router'
+import Home from './views/Home.vue'
 
 
 const router = useRouter()
