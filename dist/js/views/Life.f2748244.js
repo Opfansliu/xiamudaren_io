@@ -1,0 +1,1 @@
+import{_ as e}from"../_plugin-vue_export-helper/_plugin-vue_export-helper.0ba25e0a.js";import{R as t,S as _,U as o}from"../@vue/@vue.0cb10f70.js";const n={},s=o("h1",null,"life",-1),c=[s];function r(a,i){return t(),_("div",null,c)}const d=e(n,[["render",r]]);export{d as default};
