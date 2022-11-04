@@ -27,7 +27,8 @@ function goSkills() {
   router.push({name:'skills'})
 }
 function goRead() {
-  router.push('read')
+  console.log('read')
+  router.push({name:'read'})
 }
 function goLife() {
   router.push('life')
@@ -107,7 +108,7 @@ h4 {
 
 .bg {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url("../assets/night01.gif");
   background-size: cover;
   background-position: center 0px;
